@@ -1,0 +1,50 @@
+1. What is JSON?
+
+    JSON is an acronym for JavaScript Object Notation.
+    It is an open standard format, which is lightweight and text-based, designed explicitly for human-readable data interchange.
+    It is used while writing JavaScript based applications that includes browser extensions and websites
+    JSON format is used for serializing and transmitting structured data over network connection.
+    It is primarily used to transmit data between a server and web applications.
+
+
+2.  What is HTTP Status codes?
+
+    1xx: Informational
+	It means the request has been received and the process is continuing.
+
+    2xx: Success
+	It means the action was successfully received, understood, and accepted.
+
+    3xx: Redirection
+	It means further action must be taken in order to complete the request.
+
+    4xx: Client Error
+	It means the request contains incorrect syntax or cannot be fulfilled.
+
+    5xx: Server Error
+
+
+3. What is the meaning of 500 Status codes?
+
+    The HTTP 500 code indicates a general problem.
+    It indicates that the server detected an unexpected circumstance that prohibited it from completing the request.
+    When there are no other error codes available, the server will frequently report this error.
+
+
+4. What is No-Sql Databases?
+
+
+    NoSQL Database is used to refer a non-SQL or non relational database.
+    It provides a mechanism for storage and retrieval of data other than tabular relations model used in relational databases.
+    NoSQL database doesn't use tables for storing data.
+    It is generally used to store big data and real-time web applications.
+    Ex : MongoDB  
+
+
+5. What is IIS?
+
+
+    Internet Information Services, also known as IIS.
+    It is a Microsoft web server that runs on Windows operating system.
+    It is used to exchange static and dynamic web content with internet users.
+    IIS can be used to host, deploy, and manage web applications using technologies such as ASP.NET and PHP.

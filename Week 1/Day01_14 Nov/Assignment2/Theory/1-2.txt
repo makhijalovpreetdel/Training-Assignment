@@ -1,0 +1,24 @@
+1. How to display images in title bar?
+
+Steps involved are : 
+
+
+   a. The image must be square dimensioned in any image format (ico, jpg, bmp, gif, png) to appear in browsers properly. Images with non-square dimensions will also work. However, such icons may not look professional.
+   
+   b. You must convert your image into the .ico format. There are many online tools to do that.
+
+   c. Opening the tool, you must upload your image file. Then, the image will be converted automatically.
+   
+   d. Download the image and save your .ico file on the computer.
+
+   e. Rename the file to favicon.ico, because the browser automatically recognizes only this name.
+
+   f. Upload the file to the host directory, where your website files are located.
+
+   g. When your favicon.ico file is uploaded, the browser will select it automatically and display the image in the browser.
+
+
+2. What is the purpose of "alt" attribute of img tag?
+
+
+   The alt attribute provides alternative information for an image if a user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
