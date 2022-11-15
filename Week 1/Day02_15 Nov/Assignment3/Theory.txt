@@ -1,0 +1,25 @@
+1.   How to apply style to first letter of the paragraph?
+
+
+     To style the first letter of a word, we can use the pseudo-element, p::first-letter.
+
+     p::first-letter { font-size:28px; }
+
+2.   Why do we use  ~  and >  symbols in css selectors?
+
+	
+     > selector
+     
+     The greater than sign (>) selector in CSS is used to select the element with a specific parent. 
+     It is called as element > element selector.
+     It is also known as the child combinator selector which means that it selects only those elements which are direct children of a parent.
+ 
+     div>p means apply the styling to the p tag which is a direct child of div tag.
+
+
+     ~ selector
+     
+     It is general sibling combinator and similar to Adjacent sibling combinator.
+     The difference is that the second selector does NOT have to immediately follow the first one means It will select all elements that is preceded by the former selector.
+     
+     div~p means apply the styling to the all the p tags that are its siblings.
