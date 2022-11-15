@@ -1,0 +1,10 @@
+1.  What is the purpose of style tag and style attribute?
+
+    The <style> tag is used to define style information (CSS) for a document.
+    Style tag is used for color, images, size, background changes, and animation.
+    It is used for internal CSS.
+    
+
+    The style attribute specifies an inline style for an element.
+    The style attribute will override any style set globally.
+    
