@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <style>
+
+            #Container
+            {
+                background-color: whitesmoke;
+                margin: auto;
+                width: 45%;
+                height: 88%;
+            }
+            #headContainer
+            {
+                background-color: rgba(255, 160, 122, 0.927);
+                padding-left: 30px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                height: 70;
+            }
+
+            #headContainer span
+            {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            #mainform
+            {
+                padding: 30px;
+            }
+
+            #mainform input
+            {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                padding: 5px;
+
+            }
+
+            #area,#local1,#local2
+            {
+                width: 80px;
+            }
+
+            form sub
+            {
+                color: red;
+            }
+
+            #order
+            {
+                color: white;
+                background-color: red;
+                width: 100%;
+                text-align: center;
+                border: 1px solid red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="Container">
+            <div id="headContainer">
+                <span>WELCOME TO ITALIAN PIZZA!</span>
+                <p>We deliver pizza in 40 mnutes max. If not &nbsp; - Pizza on us!</p>
+            </div>
+            <form id="mainform">
+                <label>Email</label>
+                <br/>
+                <input id="email" type="email"/>
+                <br/>
+                <br/>
+                <label>Phone</label>
+                <br/>
+                <input id="area" type="text" placeholder="Area"/>
+                <input id="local1" type="number" placeholder="Local"/>
+                <input id="local2" type="number" placeholder="Local"/>
+                <br/>
+                <br/>
+                <label>Number of slices</label>
+                <br/>
+                <input id="noofslices" type="number"/>
+
+                <br/>
+                <br/>
+
+                <label>Pizza Size</label>
+                <br/>
+                <input id="8inch" type="radio" name="size"/>
+                <label>8-inch</label>
+                &nbsp;
+                <input id="10inch" type="radio" name="size"/>
+                <label>10-inch</label>
+                &nbsp;
+                <input id="12inch" type="radio" name="size"/>
+                <label>12-inch</label>
+                &nbsp;
+                <input id="14inch" type="radio" name="size"/>
+                <label>14-inch</label>
+                &nbsp;
+
+                <br/>
+                <br/>
+
+                <label>Toppings</label>
+                <br/>
+                <input id="pepperoni" type="checkbox"/>
+                <label>Pepperoni</label>
+                &nbsp;
+                <input id="onions" type="checkbox"/>
+                <label>Onions</label>
+                &nbsp;
+                <input id="mushrooms" type="checkbox"/>
+                <label>Mushrooms</label>
+                &nbsp;
+                <input id="sausage" type="checkbox"/>
+                <label>Sausage</label>
+                &nbsp;
+
+                <br/>
+                <br/>
+
+                <sub>*</sub>
+                <input id="consent" type="checkbox"/>
+                <label>I agree to the TEMS AND CONDITIONS</label>
+
+                <br/>
+                <br/>
+
+                <form id="submitform">
+                    <input id="order" type="submit" value="Order Now">
+                </form>
+
+            </form>
+        </div>
+    </body>
+</html>

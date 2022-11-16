@@ -1,0 +1,244 @@
+<html>
+<head>
+    <style>
+
+        
+
+        #headerContainer
+        {
+            padding: 10px;
+            background-color:aqua;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+
+        #mainContainer
+        {
+            margin: auto;
+            color:midnightblue;
+            border: 1px solid black;
+            width: 600;
+        }
+
+
+        form img
+        {
+            width: 40;
+            height: 25;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            background-color: white;
+            /*margin-top: 10px;
+            margin-bottom: 10px;*/
+        }
+
+        #cardNo
+        {
+            width: 100%;
+            height: 35;
+            border: 1px solid gray; 
+            border-radius: 3px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        form{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        select
+        {
+            padding: 10px;
+            width: 90;
+            height: 35;
+            border-radius: 3px;
+            background-color: whitesmoke;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #cvv
+        {
+            width: 85;
+            height: 35;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #nameOnCard
+        {
+            width: 100%;
+            height: 35;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #footer
+        {
+            background-color: grey;
+            text-align: center;
+            padding: 10px;
+        }
+        #LastDiv
+        {
+            padding: 8px;
+            border: 1px solid orange;
+            border-radius: 3px;
+            background-color: orange;
+            color: white;
+            width: max-content;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="headerContainer">
+            <img src="https://svgsilh.com/png-1024/154684.png" width="20" height="20"/>
+            <span>This is a secure 128-bit SSL Encrypted payment. You're safe.</span>
+        </div>
+
+        <form method="post">
+            <input type="radio" id="opt1" name="pmntMeth" value="Credit Card"/>
+            <label>Credit Card (Visa, MasterCard) </label>
+            &nbsp;
+            <img src="https://cdn0.iconfinder.com/data/icons/credit-8/512/1_credit-1024.png"/>
+            
+            <img src="https://logosmarcas.net/wp-content/uploads/2020/09/Mastercard-Simbolo.jpg"/>
+            <input type="radio" id="opt2" name="pmntMeth" value="PayPal"/>
+            <label>PayPal</label>
+            &nbsp;
+            <img src="https://www.lifewire.com/thmb/g3IeYZU4CUsCaotcnkGn6pbGsc0=/1280x341/filters:fill(auto,1)/2000px-PayPal_logo.svg-56a9f6725f9b58b7d00038dd.jpg"/>
+
+            <br/>
+            <br/>
+
+
+            <label>Card number&nbsp;&nbsp;<sub>The 16 digits on front of your card</sub></label>
+            <br/>
+            <input type="text" id="cardNo" name="cardNo">
+
+            <br/>
+            <br/>
+
+                    
+                    <label>Expiration date</label>
+
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    
+                    <label>CVV2/CVC2</label>
+                    <br/>
+                    <select id="month">
+                        <option>Month</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <span>&nbsp;/&nbsp;</span>
+                    <select id="year">
+                        <option>Year</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                        <option>2028</option>
+                        <option>2029</option>
+                        <option>2030</option>
+                    </select>
+                    &emsp;
+                    &emsp;
+                    &emsp;
+
+                    <input type="number" id="cvv">
+                    <span>The last 3 digits displayed </span>
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &nbsp;
+                    &nbsp;
+                    <span>the back of your card</span>
+                    <br/>
+                    <br/>
+
+                    <label>Full Name on a Card</label>
+                    <input type="text" id="nameOnCard">
+                    <br/>
+            </form>
+        </form>
+        <div id="footer">You will be charged $29.00 every month</div>
+    </div>
+    <br/>
+
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;    
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+    &emsp;
+
+
+    <input id="LastDiv" type="button" value="Complete Transaction">
+</body>
+</html>
+
