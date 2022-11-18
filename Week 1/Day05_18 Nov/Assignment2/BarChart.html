@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body>
+        <h4 style="color: chocolate; font-size: 40px; background-color: lightpink; text-align: center;">Bar Chart</h4>
+        <hr/>
+        <input type="button" onclick="draw()" value="Draw Graph"/>
+        <br/>
+        <br/>
+
+        <canvas id="c1" style="border:2px  solid  blue"  height="510"  width="460"></canvas>
+
+        <script>
+            function draw()
+            {
+                var  obj =  document.getElementById("c1");
+			    var  ctx = obj.getContext("2d");	
+
+                ctx.strokeStyle="Pink";
+
+                var arr=[[180,40,80,240,70,45,100,22,280,45],[50,100,30,160,120,20,48,78,45,68],
+                         [90,70,220,20,40,75,85,10,81,148],[80,120,120,60,150,40,17,40,14,39]];
+
+                var total=[90,160,40,10,110,310,240,340,70,190];
+
+                //var colors=["plum","palegreen","paleturquoise","peru"];
+                var colors=["red","blue","green","yellow"];
+
+
+                for(var i=0;i<4;i++)
+                {
+                    var x=10;
+                    ctx.fillStyle=colors[i];
+                    for(var j=0;j<10;j++)
+                    {
+                        ctx.fillRect(x,total[j],35,arr[i][j]);
+                        total[j]=total[j]+arr[i][j];
+                        x=x+45;
+                    }
+                    ctx.beginPath();
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>
