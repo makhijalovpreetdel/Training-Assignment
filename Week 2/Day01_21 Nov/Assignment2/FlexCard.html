@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <style>
+
+            *{
+                box-sizing: border-box;
+            }
+
+            body
+            {
+                margin: auto;
+                padding: 30px;
+            }
+
+            .container
+            {
+                border: 1px solid black;
+                padding: 10px;
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .container figure
+            {
+                width: 150px;
+                height: 188px;
+                box-shadow: 5px 5px 5px lightgray;
+                flex: 12%;
+                max-width: 12%;
+            }
+
+            .container img
+            {
+                width: 100%;
+                height: 150px;
+            }
+
+            .container figcaption
+            {
+                border: 1px solid black;
+                border-top: 0px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            @media only screen and (max-width:700px)
+            {
+                .container figure
+                {
+                    flex: 25%;
+                    max-width: 25%;
+                }
+            }
+
+           
+            @media only screen and (max-width:600px)
+            {
+                .container figure
+                {
+                    flex: 33%;
+                    max-width: 33%;
+                }
+            }
+
+            
+            @media only screen and (max-width:500px)
+            {
+                .container figure
+                {
+                    flex: 50%;
+                    max-width: 50%;
+                }
+            }
+
+            
+            @media only screen and (max-width:300px)
+            {
+                .container figure
+                {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <figure>
+                <img src="https://2.bp.blogspot.com/-6f2mFXyrboo/VxFcz4Oh_oI/AAAAAAAAFYM/nhU-r8eVcVQgTj0aZVrjtM4TV8CidqjVgCKgB/s1600/Elephant-Animal-HD-Wallpapers.jpg"/>
+                <figcaption>ELEPHANT</figcaption>
+            </figure>
+            <figure>
+                <img src="https://internationaloperatheater.org/iot/wp-content/uploads/2019/09/rhesus-macaque_thumb.jpg"/>
+                <figcaption>MONKEY</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/09/Horse-Backgrounds-Free.jpg"/>
+                <figcaption>HORSE</figcaption>
+            </figure>
+            <figure>
+                <img src="http://1.bp.blogspot.com/-g8xO2bM7_vI/UuS-ujvZdXI/AAAAAAAAAgs/cN653JBxmgU/s1600/Caribbean_flamingo_at_slimbridge_arp.jpg"/>
+                <figcaption>FLAMINGO</figcaption>
+            </figure>
+            <figure>
+                <img src="https://i.pinimg.com/originals/bc/dc/f5/bcdcf51804467f030366e09d43a43da4.jpg"/>
+                <figcaption>LEMUR</figcaption>
+            </figure>
+            <figure>
+                <img src="https://caughtovgard.com/wp-content/uploads/2018/06/Carp.jpg"/>
+                <figcaption>CARP</figcaption>
+            </figure>
+            <figure>
+                <img src="https://wallpapercave.com/wp/cL9rF6O.jpg"/>
+                <figcaption>SEA LION</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.quizlocity.com/wp-content/uploads/2020/02/mule-deer.jpg"/>
+                <figcaption>DEER</figcaption>
+            </figure>
+        </div>
+    </body>
+</html>

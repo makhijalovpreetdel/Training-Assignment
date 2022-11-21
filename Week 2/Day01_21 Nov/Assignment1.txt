@@ -1,0 +1,47 @@
+1.   Why do you use position property in CSS?
+
+
+     >The position property is used to align the different elements in the HTML page.
+     >Position Property plays an important role to make high-quality web pages.
+     >The position property specifies the type of positioning method used for an element.
+
+     There are five different position values:
+
+	> static
+	> relative
+	> fixed
+	> absolute
+	> sticky
+
+2.   What is the difference between position property values :  absolute / relative ?
+
+	
+     Relative :  
+ 
+     > Setting the top, right, bottom, and left properties of an element with position: relative.
+     > Property will cause it to adjust from its normal position.
+     > The other objects or elements will not fill the gap.
+
+
+     Absolute : 
+
+     > An element with position: absolute; will cause it to adjust its position with respect to its parent.
+     > If no parent is present, then it uses the document body as parent.
+
+3.   How to hide an element uisng CSS?
+
+
+     There are the following CSS properties use to hide an element.
+
+	> Absolute position
+	> Color
+	> Clip-path
+	> Display
+	> filter
+	> Measurements
+	> Opacity
+	> Transform
+	> Visibility
+
+
+     
