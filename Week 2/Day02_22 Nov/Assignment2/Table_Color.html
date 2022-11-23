@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link href="bootstrap.min.css" rel="stylesheet"/>
+        <style>
+            body
+            {
+                margin: auto;
+                padding: 20px;
+            }
+            mark
+            {
+                display: block;
+                text-align: center;
+                font-weight: bold;
+                font-size: 50px;
+                color: blue;
+            }
+            table
+            {
+                border: 2px solid black;
+                width: 100%;
+            }
+        </style>
+        <!--<script>
+            function highlightTableRow(match){
+                $('.feature-property').each(function(){
+                    var value = $(this).html();
+                    if(value === match){
+                        $(this).addClass('table-success');  
+                    }
+                    else
+                    {
+                        $(this).addClass('table-danger');  
+                    }
+                });   
+}
+        </script>-->
+    </head>
+    <body>
+        <mark>Table in BootStrap</mark>
+
+        <br/>
+
+        <table class="table table-bordered">
+                <tr class="table-primary">
+                    <th>Product Name</th>
+                    <th>Unit Price</th>
+                    <th>Units in Stock</th>
+                </tr>
+                <tr class="table-success">
+                    <td>Printer</td>
+                    <td>4000</td>
+                    <td>23</td>
+                </tr>
+                <tr class="table-danger">
+                    <td>Keyboard</td>
+                    <td>1000</td>
+                    <td>0</td>
+                </tr>
+                <tr class="table-success">
+                    <td>Printer</td>
+                    <td>4000</td>
+                    <td>23</td>
+                </tr>
+                <tr class="table-success">
+                    <td>Notebooks</td>
+                    <td>400</td>
+                    <td>2</td>
+                </tr>
+                <tr class="table-success">
+                    <td>Printer</td>
+                    <td>4000</td>
+                    <td>23</td>
+                </tr>
+                <tr class="table-danger">
+                    <td>Printer</td>
+                    <td>4000</td>
+                    <td>0</td>
+                </tr>
+                <tr class="table-success">
+                    <td>Printer</td>
+                    <td>4000</td>
+                    <td>23</td>
+                </tr>
+                <tr class="table-danger">
+                    <td>Monitor</td>
+                    <td>3500</td>
+                    <td>0</td>
+                </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+1.   What is The Viewport?
+
+
+     > A viewport is a term for the visible area of a webpage on a display device.
+     > It is used in both code and analog design as a way to refer to the display screen and how layout fits into that screen.
