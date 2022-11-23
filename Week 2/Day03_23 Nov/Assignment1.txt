@@ -1,0 +1,58 @@
+1.   Find out the details about List attribute in html5 forms. How to use datalist tag? Prepare an example for list attribute and datalist tag?
+
+
+     List Attribute: 
+
+     > The list attribute in HTML is used to identify a list of pre-defined options for an <input> element to suggest the user.
+     > This attribute is used by the <input> element.
+
+     <datalist> tag : 
+
+     > The <datalist> tag specifies a list of pre-defined options for an <input> element.
+     > The <datalist> tag is used to provide an "autocomplete" feature for <input> elements.
+     > Users will see a drop-down list of pre-defined options as they input data.
+     > The <datalist> element's id attribute must be equal to the <input> element's list attribute(this binds them together).
+
+     Example of list attribute : 
+
+     <input list="browsers">
+
+     <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Google Chrome">
+        <option value="Opera">
+        <option value="Safari">
+     </datalist>
+
+     Example of <datalist> tag: 
+
+     <div>Choose your favorite color from this list:</div>
+     <input list="colors" />
+     <datalist id="colors">
+       <option value="Red"></option>
+       <option value="Green"></option>
+       <option value="Blue"></option>
+       <option value="Orange"></option>
+       <option value="Purple"></option>
+     </datalist>
+
+
+2.   What are  Web Crawlers in SEO?
+
+
+     > A web crawler is an online bot that explores web pages on the internet to learn about them and their content, all in order to serve this information to online searchers when they pose a query on a respective search engine.
+     > Because the internet is also known as the World Wide Web, it’s fitting that a bot is known as a crawler.
+     > But other names include SEO spider, website crawler, or web crawlers.
+
+
+3.   Why do you use backlinks in SEO?      
+
+
+     > Backlinks are an incredible tool for search engine optimization (SEO), one your business would do well to employ.   
+     > Backlinks are important for SEO for a few reasons. One, they’re a useful tool for bringing traffic to your site.
+     > Two, backlinks serve as an endorsement or “vote of confidence” of your site, which can increase trust.
+     > And three, backlinks are one of the most influential ranking factors used by search engines.
+
+
+4.   

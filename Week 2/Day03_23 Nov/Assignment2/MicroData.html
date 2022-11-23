@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                margin-top: 10px;
+                text-align: center;
+            }
+            
+            mark
+            {
+                font-size: 40px;
+                color: blue;
+                display: block;
+            }
+
+            .container
+            {
+                padding: 8px;
+                text-align: left;
+                border: 3px solid olive;
+                margin: auto;
+                width: 30%;
+            }
+
+
+            .keys
+            {
+                font-size: 25px;
+                text-align: left;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: chocolate;
+            }
+
+            .values
+            {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: blue;
+                font-size: 20px;
+                text-align: right;
+            }
+
+            img
+            {
+                width: 10%;
+                margin: auto;
+                border-radius: 40px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+        <mark>Microdata Applications</mark>
+        <hr/>
+
+        <div itemscope>
+            <span itemprop="logo"><img src="https://static.vecteezy.com/system/resources/previews/000/397/015/original/modern-company-logo-design-vector.jpg"/></span>
+            <br/>
+        </div>
+
+        <br/>
+
+        <div itemscope class="container">
+
+            <p><span class="keys">Name : </span><span itemprop="name" class="values">ABC</span></p>
+
+            <p><span class="keys">URL : </span><span itemprop="url" class="values"></span><a href="https://www.geeksforgeeks.org"/>Geeks For Geeks</a></span></p>
+
+            <p><span class="keys">Person : </span><span itemprop="person" class="values">XYZ</span></p>
+
+            <p><span class="keys">Place : </span><span itemprop="place" class="values">Ranchi</span></p>
+
+            <p><span class="keys">Movie : </span><span itemprop="movie" class="values">Jab We Met</span></p>
+
+            <p><span class="keys">Recipe : </span><span itemprop="recipe" class="values">Kadhai Paneer</span></p>
+
+            <p><span class="keys">Restaurant : </span><span itemprop="restaurant" class="values">The Chilli Chinese</span></p>
+
+
+        </div>
+    </body>
+</html>
