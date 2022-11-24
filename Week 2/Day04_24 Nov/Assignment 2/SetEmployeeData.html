@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                padding: 20px;
+                margin: auto;
+            }
+
+            h1
+            {
+                text-align: center;
+                color: blue;
+            }
+
+            fieldset
+            {
+                width: fit-content;
+            }
+
+            form
+            {
+                
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Storing Customer Details in LocalStorage</h1>
+		<hr/>
+		
+		<form>
+            <fieldset>
+                <legend>Customer Details</legend>
+                
+                Customer Name  :  <input type="text"  id="cname"  name="cname"  required/>
+                <br/><br/>
+                
+                Joined Date  :  <input type="date"  id="jdate"  name="jdate"  required/>
+                <br/><br/>
+                
+                Favourite Color  :  <input type="color"  id="favcolor"  name="favcolor"  required/>
+                <br/><br/>
+                
+                <input type="button"  value="Save Customer Details"   onclick="fn_saveDetails()" />
+                &nbsp;
+                <input type="button"  value="Delete Customer Details"   onclick="fn_deleteDetails()" />
+                
+            </fieldset>
+        </form>
+
+        <br/>
+        <br/>
+
+        <a href="GetEmployeeData.html">Click to get details</a>
+
+        <script>
+				
+            function  fn_saveDetails()
+            {
+
+                    var  txtCname  =  document.getElementById("cname");
+                    var  txtJdate  =  document.getElementById("jdate");
+                    var  txtFavcolor  =  document.getElementById("favcolor");
+
+
+                    var  detObj = {};
+
+                    detObj.cname =  txtCname.value;
+                    detObj.jdate =  txtJdate.value;
+                    detObj.favcolor =  txtFavcolor.value;
+                    
+                    
+                    var  resStr  =  JSON.stringify(  detObj );
+                                            
+                    		
+                    localStorage.setItem("custDetails", resStr);
+                    
+                    alert("Customer Details have been successfully");
+            }
+
+            function   fn_deleteDetails()
+            {
+                localStorage.removeItem("custDetails");						
+                alert("Customer details removed from  localStorage");
+            }
+
+        </script>
+
+    </body>
+</html>

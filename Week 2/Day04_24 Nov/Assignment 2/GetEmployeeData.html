@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style>
+
+            body
+            {
+                padding: 20px;
+                margin: auto;
+                background-color: antiquewhite;
+            }
+
+            h1
+            {
+                text-align: center;
+                color: blue;
+            }
+
+            h3,p
+            {
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+
+        <h1>Getting Customer Details from the LocalStorage</h1>
+		<hr/>
+
+        <h3 id="welcomehd" style="color: darkcyan;"></h3>
+
+        <p id="welcomepg" style="color: blueviolet;"></p>
+
+        <input type="button"  value="Get Customer Details"   onclick="fn_getDetails()" />
+        
+        
+        <br/>
+        <br/>
+        <br/>
+
+        <a href="SetEmployeeData.html">Click to store details</a>
+
+        <script>
+
+            function fn_getDetails()
+            {
+                        
+                var  resStr  =  localStorage.getItem("custDetails");		 
+                
+
+                var hdObj = document.getElementById("welcomehd");
+                var pgObj = document.getElementById("welcomepg");
+                
+                
+                if(resStr == null)
+                {
+                    document.body.style.backgroundColor = 'white';
+                    hdObj.innerHTML = "Welcome to guest user";
+                    pgObj.innerHTML = "Data is empty";
+                }
+
+                else
+                {	
+                    document.body.style.backgroundColor = 'aqua';
+                    
+                    var detObj =  JSON.parse( resStr);
+                                    
+                    hdObj.innerHTML = "Welcome to "+detObj.cname;
+                    pgObj.innerHTML =  "Joining Date : " + detObj.jdate +  "  Favourite Color : "  + detObj.favcolor;
+                    
+                }	
+            }
+
+        </script>
+
+    </body>
+</html>
