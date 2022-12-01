@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link href="ShapesSass.css"  rel="stylesheet"/>
+    </head>
+    <body>
+        <mark style="font-size: 45px; color: brown; text-align: center; display: block;">Image Sass Demo</mark>
+        <br/>
+
+        <label style="font-size: 25; color: darkgoldenrod;">Select the shape you want your image to display : </label>
+
+        &nbsp;
+        &nbsp;
+
+        <select id="drop" onchange="SelectClass()" style="font-size: 20; color: blueviolet;">
+            <option>rectangle</option>
+            <option>circle</option>
+            <option>square</option>
+        </select>
+
+        <br/>
+
+        <img src="https://wallpapercave.com/wp/xl8hSG3.jpg" class="rectangle" id="image"/>
+
+        <script>
+
+            function SelectClass()
+            {
+                var sel=document.getElementById("drop").value;
+                var imgObj=document.querySelector("#image");
+
+                imgObj.className=sel;
+            }
+            
+        </script>
+
+    </body>
+</html>

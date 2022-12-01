@@ -1,0 +1,21 @@
+.rectangle {
+  margin: 25px;
+  width: 300px;
+  height: 200px;
+  box-shadow: 5px 5px 8px DarkBlue;
+}
+
+.square {
+  margin: 25px;
+  width: 300px;
+  height: 300px;
+  box-shadow: 5px 5px 8px green;
+}
+
+.circle {
+  margin: 25px;
+  width: 300px;
+  height: 300px;
+  box-shadow: 5px 5px 8px red;
+  border-radius: 150px;
+}/*# sourceMappingURL=ShapesSass.css.map */

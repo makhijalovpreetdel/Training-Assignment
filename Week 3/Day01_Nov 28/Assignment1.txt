@@ -1,0 +1,38 @@
+1.   How to add or remove CSS classes to html elements using JavaScript?
+
+
+     > First, get the node using querySelector() method.
+     > We can add the new class using '+' operator.
+     > Can replace all the classes by using assignment operator.
+     > Firstly, we need to access all the available classes using classList property.
+       Then, can access class among class lists using either index property or item() method.
+     > Then can use add() method to add one or more classes.
+     > And, also can use remove() method to remove one or more classes.
+
+
+2.   What is CDN? What are the advantages of using CDN urls?
+
+
+     > A content delivery network (CDN) is a network of interconnected servers that speeds up webpage loading for data-heavy applications.
+     > CDN can stand for content delivery network or content distribution network.
+     > When a user visits a website, data from that website's server has to travel across the internet to reach the user's computer.
+     > If the user is located far from that server, it will take a long time to load a large file, such as a video or website image.
+     > Instead, the website content is stored on CDN servers geographically closer to the users and reaches their computers much faster.  
+
+   
+     Advantages:
+  
+     > Decrease Server Load
+     > Improve Site Speed and Website Performance
+     > Allow Audience Segmentation Based on User Analytics
+     > Reduce Packet Loss and Lower Network Latency
+     > Enable Advanced Website Security
+     > Enhance Content Availability
+     > Contribute to Cost Savings by Reducing Bandwidth
+     > Increase Audience Reach and Scale Effectively.
+
+
+3.   How to align justify using Bootstrap?
+
+
+     If you want to make text justify aligned using Bootstrap, you have to use Bootstrap class .text-justify. 

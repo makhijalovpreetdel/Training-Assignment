@@ -1,0 +1,74 @@
+@import "Helper.less";
+
+.mainanch
+{
+    color: black;
+    text-decoration: none;
+    font-weight: lighter;
+    &:hover{
+        color: green;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
+.theme(@className) when (@className="rectangle")
+{
+    width: 150px;
+    height: 100px;
+
+    border: 5px solid yellow;
+}
+
+.theme(@className) when (@className="square")
+{
+    width: 100px;
+    height: 100px;
+
+    border: 5px solid lightcoral;
+}
+
+.theme(@className) when (@className="circle")
+{
+    width: 100px;
+    height: 100px;
+
+    border: 5px solid goldenrod;
+
+    border-radius: 60px;
+}
+
+.rectangle
+{
+    .theme("rectangle");
+}
+
+.square
+{
+    .theme("square");
+}
+
+.circle
+{
+    .theme("circle");
+}
+
+.shadowButton()
+{
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin: 6px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.fancyButton
+{
+    .shadowButton();
+}

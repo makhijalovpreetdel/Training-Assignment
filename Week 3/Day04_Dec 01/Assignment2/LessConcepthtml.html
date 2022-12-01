@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link href="LessConcept.css"  rel="stylesheet"/>
+    </head>
+
+    <body>
+        <mark style="font-size: 50px; display: block; text-align: center; color: maroon; font-weight: bold;">Learn Sass and less concepts here</mark>
+        <br/>
+
+        <select id="drop" onchange="changed()" style="font-size: 20px; padding: 6px; margin-left: 6px;" >
+            <option>rectangle</option>
+            <option>square</option>
+            <option>circle</option>
+        </select>
+
+        <div>
+            <img id="image" class="rectangle" src="https://www.kindpng.com/picc/m/485-4850280_sass-and-less-support-sass-less-logo-png.png">
+        </div>
+
+
+        <h4>Less Concepts <a class="mainanch" href="https://lesscss.org/">Less Website</a></h4>
+        <p>LESS is an abbreviated Learner Style styles, is an opensource pre-processor language for CSS. LESS is a CSS pre-processor that enables customizable, manageable and reusable style sheet for website. LESS is a dynamic style sheet language that extends the capability of CSS. LESS is also cross browser friendly.</p>
+
+        <br/>
+
+        <h4>Sass Concepts <a class="mainanch" href="https://sass-lang.com/">Sass Website</a></h4>
+        <p>Sass stands for Syntactically Awesome Stylesheet. Sass is an extension to CSS. Sass is a CSS pre-processor. Sass is completely compatible with all versions of CSS. Sass reduces repetition of CSS and therefore saves time. Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 2006. Sass is free to download and use.</p>
+
+        <br/>
+
+        <span><a class="fancyButton" href="https://www.udemy.com/course/sasscourse/?matchtype=p&msclkid=768dd5ac4fbc1cadc164b62421593cfb&utm_campaign=BG-LongTail_la.EN_cc.INDIA&utm_content=deal4584&utm_medium=udemyads&utm_source=bing&utm_term=_._ag_1207264180483456_._ad__._kw_%2BSass+%2BBeginner_._de_c_._dm__._pl__._ti_kwd-75454323459125%3Aloc-90_._li_155464_._pd__._">Click here to get the tutorials</a></span>
+
+        <script>
+            function changed()
+            {
+                var selVal=document.getElementById("drop").value;
+
+                var obj=document.querySelector("#image");
+
+                obj.className=selVal;
+            }
+        </script>
+
+    </body>
+</html>
