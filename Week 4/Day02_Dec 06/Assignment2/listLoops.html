@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+    <body>
+        <mark style="display: block; font-size: 25px; color: blue; text-align: center;">JavaScript Programming Loops</mark>
+        <hr/>
+        <br/>
+        <br/>
+        
+        <div style="font-size: 25px; width: 50%; padding: 15px; border: 10px solid pink; border-radius: 8px; margin: auto;">
+            <input type="button" value="Get Data" style="font-size: 25px;" onclick="fn_getData()"/>
+            <br/>
+
+            <ul id="ulist"></ul>
+        </div>
+
+        <script>
+
+            function fn_getData()
+            {
+                var ulistObj=document.getElementById("ulist");
+
+                var x=1;
+                var str="";
+
+                for(x=1;x<=4;x++)
+                {
+                    if(x%2==1)
+                        str+='<li style="color: Blue">Welcome to JavaScript - '+x+'</li>';
+                    else
+                        str+='<li style="color: Green">Welcome to JavaScript - '+x+'</li>';
+                }
+
+                ulistObj.innerHTML=str;
+            }
+
+        </script>
+    </body>
+</html>

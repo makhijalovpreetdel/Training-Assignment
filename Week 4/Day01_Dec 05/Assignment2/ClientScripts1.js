@@ -1,0 +1,1 @@
+alert("This alert is coming from ClientScripts1.js");

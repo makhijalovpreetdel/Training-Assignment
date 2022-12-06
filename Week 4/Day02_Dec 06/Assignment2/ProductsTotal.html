@@ -1,0 +1,47 @@
+<html>
+    <head></head>
+    <body>
+        <mark style="text-align: center; font-size: 45px; color: blue; display: block;">Get the total value of the products.</mark>
+        <hr/>
+
+        <br/>
+        <br/>
+
+        <div style="margin: auto; width: 50%; font-size: 35px;">
+            <div style="border: 14px solid purple;padding: 10px;">
+
+                Product Name  :  <input type="text"  id="pname" style="font-size: 25px; padding: 5px;"/>
+                <br/><br/>
+                
+                Unit Price  :  <input type="text"  id="unitpr" style="font-size: 25px; padding: 5px;"/>
+                <br/><br/>
+
+                Quantity  :  <input type="text"  id="qty" style="font-size: 25px; padding: 5px;"/>
+                <br/><br/>
+
+                <input  type="button"  value="Get Total"  onclick="fn_showTotal()" style="font-size: 25px; padding: 5px;"/>
+
+            </div>
+            <p  id="p1"></p>
+        </div>
+
+
+        <script>		
+            function  fn_showTotal()
+            {
+                var  paraObj  =  document.getElementById("p1");		
+                var  unitPriceStr  =  document.getElementById("unitpr").value;	
+                var  qntyStr  =  document.getElementById("qty").value;
+                
+                var unitPrice=parseInt(unitPriceStr,10);
+                var qnty=parseInt(qntyStr,10);
+
+                
+                paraObj.innerText="Total Amount : "+(unitPrice*qnty); 
+
+                
+            }		
+        </script>
+
+    </body>
+</html>

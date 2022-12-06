@@ -1,0 +1,59 @@
+<html>
+    <head></head>
+    <body>
+        <mark style="text-align: center; font-size: 45px; color: blue; display: block;">Perform Calculations</mark>
+        <hr/>
+
+        <br/>
+        <br/>
+
+        <div style="font-size: 25px; width: 30%; padding: 15px; border: 10px solid pink; border-radius: 8px; margin: auto;">
+            <input type="button" value="Show Data" style="font-size: 25px;" onclick="fn_showData()"/>
+            <br/>
+            <br/>
+
+            <table id="tbl" border="1">
+            </table>
+        </div>
+
+        <script>
+            
+            var courses=["HTML5","CSS3","jQuery","Angular JS","Bootstrap"];
+            var size=courses.length;
+            var called=false;
+
+            function fn_showData()
+            {
+                if(!called)
+                    called=true;
+                else
+                {
+                    alert("Already added.");
+                    return;
+                }
+                var r=0,c=0,i=0;
+                var str='<tr><th colspan="4" style="padding: 10px;">Courses</th></tr>';
+                while(r<4)
+                {
+                    if(c==0)
+                        str+="<tr>";
+                    
+                    str+='<td style="padding: 10px;">'+courses[i]+"</td>";
+                    i=(i+1)%size;
+                    c++;
+
+                    if(c==4)
+                    {
+                        str+="</tr>";
+                        r++;
+                        c=0;
+                    }
+                }
+                var tblObj=document.getElementById("tbl");
+                tblObj.innerHTML=str;
+            }
+
+        </script>
+
+    </body>
+</html>

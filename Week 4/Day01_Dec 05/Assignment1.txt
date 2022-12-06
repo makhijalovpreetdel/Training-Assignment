@@ -1,0 +1,63 @@
+1.   What are the different activities that we do using JavaScript in client side programming?
+
+
+     > Control Document Appearance and Content
+     > Control the Browser
+     > Interact with HTML Forms
+     > Interact with the User
+     
+
+2.   What is JavaScript engine for Safari?
+
+
+     > JavaScriptCore is Apple 's engine for its Safari browser.
+     > WebKit is developed by Apple and  used in its Safari web browser, as well as all iOS web browsers.
+
+
+3.   Is it possible to disable JavaScript in browser?  If yes, How to disable javascript in browser?
+
+
+     Yes, it is possible and easy to disable javascript from the browser.
+
+     Steps to disable javascript from the browser are as follows :
+   
+     > Open Google Chrome.
+     > In the upper-right of the Chrome window, click the Chrome menu icon. icon.
+     > Select Settings from the drop-down menu.
+     > On the left side of the screen, click Privacy and security.
+     > Expand the Site Settings option.
+     > On the Site Settings page, scroll to the bottom of the screen. Under the Content section, click the JavaScript option.
+     > Under Default behavior, click the Sites can use Javascript radio button to enable JavaScript, or click the Don't allow sites to use Javascript radio button to disable JavaScript.
+
+
+4.   What is the difference between undefined and not defined in JavaScript?
+
+
+     The difference is that undefined refers to the value of the variable and is not defined is an error message that indicates that the variable does not exist in the running program.
+
+
+5.   Difference between ==  and ===?
+
+
+     > == or loose equality operator in javascript.
+     > == operator is used to check equality of two different values. It tests the abstract equality. It does the necessary type conversion before checking the equality.
+     > This operator checks equality only after converting both the values to a common type i.e type coercion.
+
+     > === or strict equality operator in javascript.
+     > === operator is used to check strict equality of two different values. It does not do the type conversion before checking the equality.
+     > This operator checks equality only after without doing the type coercion.
+
+
+6.   What does the isNaN() function javascript? 
+
+
+     > In JavaScript NaN is short for "Not-a-Number".
+     > The isNaN() method returns true if a value is NaN.
+     > The isNaN() method converts the value to a number before testing it.
+
+
+7.   Difference between Client side JavaScript and Server side JavaScript?
+
+
+     > Client-Side JavaScript (CSJS) -- an extended version of JavaScript that enables the enhancement and manipulation of web pages and client browsers
+     > Server-Side JavaScript (SSJS) -- an extended version of JavaScript that enables back-end access to databases, file systems, and servers
