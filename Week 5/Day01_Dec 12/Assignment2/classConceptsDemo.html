@@ -1,0 +1,35 @@
+<html>
+    <head></head>
+    <body>
+        <h2>Class Concepts</h2>
+        <hr/>
+
+        <br/>
+
+        <input type="button" onclick="fn_createObj()" value="Show Data"/>
+
+        <script>
+            class Employee
+            {
+                constructor(empNo,ename,job)
+                {
+                    this.empNo=empNo;
+                    this.ename=ename;
+                    this.job=job;
+                }
+                showDetails() {
+
+                    alert(`Employee Number : ${this.empNo} , Employee Name : ${this.ename}, Job : ${this.job}`)
+                    console.log(`Employee Number : ${this.empNo}, Employee Name : ${this.ename}, Job : ${this.job}`);
+                }
+            }
+
+            function fn_createObj()
+            {
+                var empObj=new Employee(101,"Rahul","Accountant");
+                empObj.showDetails();
+            }
+
+        </script>
+    </body>
+</html>

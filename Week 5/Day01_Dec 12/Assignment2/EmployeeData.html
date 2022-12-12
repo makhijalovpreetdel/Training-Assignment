@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <style>
+            th,td
+            {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="font-weight: bold;">Data Filtration using JavaScript</h2>
+        <hr/>
+        Search Value : <input type="text" id="inpField"/>
+        <input type="button" id="findbyempno" value="Find By Empno" onclick="findByEmpno()"/>
+        <input type="button" id="findbyjob" value="Find By Job" onclick="findByJob()"/>
+        <br/>
+
+        <br/>
+
+        <table id="tbl" border="1" style="width: 38%;">
+            <tr>
+                <th>Empno</th>
+                <th>Ename</th>
+                <th>Job</th>
+                <th>Salary</th>
+                <th>Deptno</th>
+            </tr>
+        </table>
+        <script>
+
+            const empData=[
+                            { empno : 1, ename : "Scott", job: "engineer", salary: 40000, deptno: 1001},
+                            { empno : 2, ename : "Rahul", job: "hr", salary: 45000, deptno: 1002},
+                            { empno : 3, ename : "Vijay", job: "engineer", salary: 45000, deptno: 1001},
+                            { empno : 4, ename : "Vikash", job: "accountant", salary: 50000, deptno: 1003},
+                            { empno : 5, ename : "Punit", job: "clerk", salary: 30000, deptno: 1004},
+                            { empno : 6, ename : "Pranav", job: "hr", salary: 35000, deptno: 1002},
+                            { empno : 7, ename : "Harshit", job: "engineer", salary: 70000, deptno: 1001},
+                            { empno : 8, ename : "Vivek", job: "accountant", salary: 35000, deptno: 1003},
+                            { empno : 9, ename : "Vijay", job: "hr", salary: 25000, deptno: 1002},
+                            { empno : 10, ename : "Rakesh", job: "clerk", salary: 28000, deptno: 1004},
+                            { empno : 11, ename : "Vishal", job: "engineer", salary: 48000, deptno: 1001},
+                            { empno : 12, ename : "Prakash", job: "accountant", salary: 36000, deptno: 1003},
+                            { empno : 13, ename : "Abhay", job: "hr", salary: 26000, deptno: 1002},
+                            { empno : 14, ename : "Akash", job: "clerk", salary: 14000, deptno: 1004},
+                            { empno : 15, ename : "Akshay", job: "accountant", salary: 43000, deptno: 1003},
+                            { empno : 16, ename : "Diljit", job: "developer", salary: 88000, deptno: 1005},
+                            { empno : 17, ename : "Dinesh", job: "engineer", salary: 72000, deptno: 1001},
+                            { empno : 18, ename : "Priya", job: "clerk", salary: 32000, deptno: 1004},
+                            { empno : 19, ename : "Shruti", job: "hr", salary: 27000, deptno: 1002},
+                            { empno : 20, ename : "Jyoti", job: "accountant", salary: 41000, deptno: 1003}
+                        ]
+
+            var tblIntData=document.getElementById("tbl").innerHTML;
+
+            function displayData(arr)
+            {
+                var tableObj=document.getElementById("tbl");
+                tableObj.innerHTML=tblIntData;
+
+                for(var i in arr)
+                {
+                    var row=tableObj.insertRow(-1);
+
+                    const all_keys = Object.keys(arr[i]);
+
+                    for (let j=0; j < all_keys.length; j++) {
+                        var cell=row.insertCell(-1);
+                        cell.innerHTML=arr[i][all_keys[j]];
+                    }
+                }
+            }
+
+            function findByEmpnoHelper(obj)
+            {
+                var inpObjVal=parseInt(document.getElementById("inpField").value);
+                return obj.empno==inpObjVal;
+            }
+
+            function findByEmpno()
+            {
+                const arr=empData.find(findByEmpnoHelper);
+
+                var tableObj=document.getElementById("tbl");
+                tableObj.innerHTML=tblIntData;
+
+                var row=tableObj.insertRow(-1);
+
+                const all_keys = Object.keys(arr);
+
+                for (let j=0; j < all_keys.length; j++) {
+                    var cell=row.insertCell(-1);
+                    cell.innerHTML=arr[all_keys[j]];
+                }
+
+            }
+
+            function findByJobHelper(obj)
+            {
+                var inpObjVal=document.getElementById("inpField").value.toLowerCase();
+                return obj.job==inpObjVal;
+            }
+
+            function findByJob()
+            {
+                const arr=empData.filter(findByJobHelper);
+                displayData(arr);
+            }
+
+        </script>
+    </body>
+</html>
