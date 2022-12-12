@@ -1,0 +1,62 @@
+<html>
+    <head></head>
+    <body>
+        <mark style="display: block; font-size: 40px; color: brown; text-align: center;">
+            Use of maps
+        </mark>
+        <hr/>
+
+        <br/><br/>
+
+        <div style="font-size: 20px;">
+            <p>Original array is as follows : [ "Hyderabad", "Mumbai",  "Bangalore", "Gurgaon"]</p>
+
+            <span>Select the modification you want in the new array.</span>
+            <select id="drop" onchange="fn_maparray()">
+                <option value="-1">--Choose Option--</option>
+                <option value="0">Capitalize the array</option>
+                <option value="1">Get three letters of each item</option>
+                <option value="2">Replace 'a' in each item with @</option>
+            </select>
+
+            <br/>
+            <br/>
+
+            <span id="res"></span>
+        </div>
+
+        <script>
+            var orgArr=["Hyderabad","Mumbai","Bangalore","Gurgaon"];
+
+            function fn_maparray()
+            {
+                var spanObj=document.getElementById("res");
+                var evnObj=event.target.value;
+                var arr=[];
+
+                if(evnObj==-1)
+                {
+                    spanObj.innerHTML="";
+                    alert("Select one option from the dropdown list.");
+                    return;
+                }
+                else if(evnObj==0)
+                    arr=orgArr.map(toUpper);
+                else if(evnObj==1)
+                    arr=orgArr.map(function(item){ return item.substr(0,3)});
+                else
+                    arr=orgArr.map(item=>item.replaceAll('a','@'));
+
+                spanObj.innerHTML="Modified array is "+arr;
+
+            }
+
+            function toUpper(x)
+            {
+                return x.toUpperCase();
+            }
+
+        </script>
+
+    </body>
+</html>

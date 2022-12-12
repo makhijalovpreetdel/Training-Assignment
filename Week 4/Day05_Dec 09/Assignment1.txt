@@ -1,0 +1,26 @@
+1.   How to add events to html elements at runtime  using javascript?
+
+
+     > JavaScript allows you to attach event listeners to HTML elements so that you can run a certain function when an event is triggered.
+     > The built-in method addEventListener() allows you to attach an event listener to an HTML element. 
+       It accepts two parameters: the event type to listen to and the callback function to run when the event is triggered:
+
+	Element.addEventListener(type, callbackFn);
+
+	Example : 
+	
+	Suppose you want to display an alert() box when a <button> element is clicked. Here’s how you do it:
+
+
+	<body>
+  	    <button id="save">Save</button>
+            <script>
+    		let button = document.getElementById("save");
+
+		function fnClick(event) {
+		    alert("Button save is clicked");	
+		}
+
+		button.addEventListener("click", fnClick);
+	    </script>
+  	</body>

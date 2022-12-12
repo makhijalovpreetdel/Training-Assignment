@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <style>
+            .error
+            {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+		<h3>JavaScript Programming -- Form Validations </h3>
+		<hr/>
+		
+		 
+			<form   id="form1"   name="form1"  onsubmit="return fn_submitData()"   
+						  action="login.php"   method="get">			
+			
+					Customer Name  :  <input  type="text"  id="cname" name="cname"  onblur="fn_validatecname()"  autofocus/>  
+					<span id="sp1" class="error">*</span>
+					<br/><br/>
+			
+					Source Station  :  <input type="text"  id="srcstn" name="srcstn" onblur="fn_validatesrcstn()"/>    
+					<span id="sp2" class="error">*</span>					
+					<br/><br/>
+
+                    Destination Station  :  <input type="text"  id="dststn" name="dststn" onblur="fn_validatedststn()"/>    
+					<span id="sp3" class="error">*</span>					
+					<br/><br/>
+			
+					Contact Number  :  <input type="text"  id="cntnum" name="cntnum" onblur="fn_validatecntnum()"/>    
+					<span id="sp4" class="error">*</span>					
+					<br/><br/>
+
+                    Email  :  <input type="text"  id="email" name="email" onblur="fn_validateemail()"/>    
+					<span id="sp5" class="error">*</span>					
+					<br/><br/>
+					
+					<input  type="submit"  value="Register"  />		
+	</form>
+		
+ 
+	 
+		
+		<script> 	 
+
+			var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; 
+
+			var regPhone=/^\d{10}$/;			
+
+			var regName = /\d+$/g;		
+
+			function fn_submitData()
+			{		
+                if(!fn_validatecname() || !fn_validatesrcstn() || !fn_validatedststn() || !fn_validatecntnum() || !fn_validateemail())
+					return false;
+
+                return true;
+			}			  
+			 
+			 function fn_validatecname()
+			 {
+					var uidTxtObj  =  document.getElementById("cname");
+					
+					uidTxtObj.setAttribute('required','');
+
+					var uidErrorSpan  =  document.getElementById("sp1"); 
+					
+					uidErrorSpan.innerHTML = "*";
+					
+					if( uidTxtObj.value ==  "")
+                    {
+                        uidErrorSpan.innerHTML = "*Customer Name should not be empty";	
+                        return false;
+                    }
+					else if(regName.test(uidTxtObj.value))
+					{
+						uidErrorSpan.innerHTML = "*Customer Name should not contain numbers.";	
+                        return false;
+					}
+                    
+                    return true; 
+			 }
+             function fn_validatesrcstn()
+			 {
+					var uidTxtObj  =  document.getElementById("srcstn"); 	
+					var uidErrorSpan  =  document.getElementById("sp2"); 
+					
+					uidErrorSpan.innerHTML = "*";
+					
+					if( uidTxtObj.value ==  "" )
+                    {
+                        uidErrorSpan.innerHTML = "*Source station should not be empty";	
+                        return false;
+                    }
+                    
+                    return true; 
+			 }
+             function fn_validatedststn()
+			 {
+					var uidDstObj  =  document.getElementById("dststn"); 
+                    var uidSrcObj  =  document.getElementById("srcstn"); 
+
+					var uidErrorSpan  =  document.getElementById("sp3"); 
+					
+					uidErrorSpan.innerHTML = "*";
+					
+					if( uidDstObj.value ==  "")
+                    {
+                        uidErrorSpan.innerHTML = "*Destination station should not be empty";	
+                        return false;
+                    }
+                    else if(uidDstObj.value == uidSrcObj.value)
+                    {
+                        uidErrorSpan.innerHTML = "*Destination station should not be same as Source station";	
+                        return false;
+                    }
+                    
+                    return true; 
+			 }
+             function fn_validatecntnum()
+			 {
+					var uidTxtObj  =  document.getElementById("cntnum"); 	
+					var uidErrorSpan  =  document.getElementById("sp4"); 
+					
+					uidErrorSpan.innerHTML = "*";
+					
+					if( uidTxtObj.value ==  "" || !regPhone.test(uidTxtObj.value))
+                    {
+                        uidErrorSpan.innerHTML = "*Please enter mobile number properly";	
+                        return false;
+                    }
+
+                    return true; 
+			 }
+             function fn_validateemail()
+			 {
+					var uidTxtObj  =  document.getElementById("email"); 	
+					var uidErrorSpan  =  document.getElementById("sp5"); 
+					
+					uidErrorSpan.innerHTML = "*";
+					
+					if(!regEmail.test(uidTxtObj.value))
+                    {
+                        uidErrorSpan.innerHTML = "*Please enter email properly.";	
+                        return false;
+                    }
+                    
+                    return true; 
+			 }
+		</script>
+		
+	 
+		
+	</body>
+</html>

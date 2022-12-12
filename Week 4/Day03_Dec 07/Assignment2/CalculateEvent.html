@@ -1,0 +1,53 @@
+<html>
+    <head></head>
+    <body>
+        <mark style="text-align: center; font-size: 45px; color: blue; display: block;">Perform Calculations</mark>
+        <hr/>
+
+        <br/>
+        <br/>
+
+        <div style="margin: auto; width: 50%; font-size: 30px;">
+            <div style="border: 14px solid purple;padding: 10px;">
+
+                First Number  :  <input type="text"  id="firstnum" style="font-size: 25px; padding: 5px;"/>
+                <br/><br/>
+                
+                Second Number  :  <input type="text"  id="secondnum" style="font-size: 25px; padding: 5px;"/>
+                <br/><br/>
+
+                <input  type="button"  value="Add"  onclick="fn_getRes()" style="font-size: 25px; padding: 5px;"/>
+                <input  type="button"  value="Sub"  onclick="fn_getRes()" style="font-size: 25px; padding: 5px;"/>
+                <input  type="button"  value="Multiply"  onclick="fn_getRes()" style="font-size: 25px; padding: 5px;"/>
+
+            </div>
+            <p  id="p1"></p>
+        </div>
+
+
+        <script>		
+
+            function  fn_getRes()
+            {
+                var  firstNumStr  =  document.getElementById("firstnum").value;		
+                var  secondNumStr  =  document.getElementById("secondnum").value;	
+                var paraObj=document.getElementById("p1");
+
+                var firstNum=parseInt(firstNumStr,10);
+                var secondNum=parseInt(secondNumStr,10);
+                
+                var obj=event.target;
+
+                if(obj.value=="Add")
+                    paraObj.innerText="Result : "+(firstNum+secondNum); 
+                else if(obj.value=="Sub")
+                    paraObj.innerText="Result : "+(firstNum-secondNum); 
+                else
+                    paraObj.innerText="Result : "+(firstNum*secondNum); 
+                
+            }
+    
+        </script>
+
+    </body>
+</html>

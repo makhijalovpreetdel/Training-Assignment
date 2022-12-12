@@ -1,0 +1,62 @@
+<html>
+    <head></head>
+	<body onload="fn_showData()">
+		<mark style="font-size: 45px; color: brown; text-align: center; display: block;">JavaScript Programming -- Dynamic Operations on Arrays </mark>
+		<hr/>
+
+        <br/>
+        <br/>
+		
+		<span style="color: red; font-size: 20px;">Skill Name  :</span>  
+
+        <select id="dropdown" onchange="fn_showData()" style="font-size: 20px; color: blue;">
+            <option id="laptops">Laptops</option>
+            <option id="mobiles">Mobile Phones</option>
+            <option id="soundsystems">Sound Systems</option>
+        </select>
+
+		<br/><br/>
+		
+
+		
+		<ul  id="list1" style="color: green; font-size: 25px;">				 
+		</ul>
+		 
+		
+		<script>	
+		
+            var  listOfLaptops = ["Lenovo Ideapad Slim 3i", "Lenovo Ideapad Slim 5i", "Lenovo Ideapad Slim 3AMD", "HP Pavilion 14", "HP Pavilion 15"]; 
+            var  listOfMobPhones = ["OnePlus Nord 2T","Samsung A73 5G","Samsung Galaxy S20","Nokia Lumia 850","Realme 3"]; 
+            var  listOfSoundSys = ["JBL Bar 9.1","Klipsh Reference","Nakamichi Shockwafe Ultra","Sonos Arc","Vizio M-Series 5.1"]; 
+            
+            var arr=listOfLaptops;
+
+			function fn_showData()
+		   	{
+				var selValue=event.target.value;
+                
+                if(selValue=="Laptops")
+                    arr=listOfLaptops;
+                else if(selValue=="Mobile Phones")
+                    arr=listOfMobPhones;
+                else if(selValue=="Sound Systems")
+                    arr=listOfSoundSys;
+
+                var str="";
+                for(var i=0;i<arr.length;i++)
+                    str+="<li>"+arr[i]+"</li>";
+                
+                var listObj=document.getElementById("list1");
+                listObj.innerHTML=str;
+
+			}
+			
+			
+			
+			
+		</script>
+		
+	 
+		
+	</body>
+</html>

@@ -1,0 +1,26 @@
+1.   What is Regular Expression in JavaScript? How to validate email id using Regular Expression?
+
+
+     A regular expression is a sequence of characters that forms a search pattern.
+     The search pattern can be used for text search and text to replace operations.
+     A regular expression can be a single character or a more complicated pattern.
+     Regular expressions can be used to perform all types of text search and text replace operations.
+
+     
+     Approach 1:
+
+     RegExp – It checks for the valid characters in the Email-Id (like, numbers, alphabets, few special characters.)
+     It is allowing every special symbol in the email-id (like, !, #, $, %, ^, &, *) symbols in the Email-Id but not allowing the second @ symbol in ID.
+
+     Approach 2:
+
+     RegExp – It checks for the pattern like anything@anything.anything
+     Not like the previous example, RegExp is accepting every character along with special character multiple times.
+
+
+2.   What is map() method in Array?   How to use map() method?
+
+
+     > The map () method creates a new array with the results of calling a function for every array element.
+     > The map method allows items in an array to be manipulated to the user’s preference, returning the conclusion of the chosen manipulation in an entirely new array.
+

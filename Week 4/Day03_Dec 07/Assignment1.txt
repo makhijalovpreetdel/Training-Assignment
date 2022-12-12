@@ -1,0 +1,38 @@
+1.   What is BOM? What is the difference between DOM and BOM?
+
+	
+     > The Browser Object Model (BOM) is a browser-specific convention referring to all the objects exposed by the web browser.
+     > The BOM allows JavaScript to “interact with” the browser.
+     > The object of the window represents a browser window and all its corresponding features.
+     > A window object is created automatically by the browser itself.
+     > Java Script’s window.screen object contains information about the user’s screen.
+
+
+     Following are the differences between DOM and BOM : 
+
+   
+     > DOM means Document Object model.
+       When the webpage is loaded the browser creates a document object model for the page.
+       All the objects are arranged as tree structure.
+
+       BOM means Browser Object Model.
+       Window object is supported by all browsers it represents the window browser.
+       All global JavaScript objects, functions, and variables automatically become members of the window object.
+   
+     
+     > They're just different objects you're dealing with:
+
+      	  The DOM is the Document Object Model, which deals with the document, the HTML elements themselves,
+          e.g. document and all traversal you would do in it, events, etc.
+
+          The BOM is the Browser Object Model, which deals with browser components aside from the document,
+          like history, location, navigator and screen (as well as some others that vary by browser).
+
+
+2.   What is event target property in javascript?
+
+
+     > The event.target property helps find the name of the HTML element used to trigger the event.
+     > For example, if we call a function from an HTML element click event, we can determine the specified element name to trigger and call a function.
+     > To get that property, we call event.target and store it in a variable like let variable = event.target.
+     > It returns a reference to the object on which the event occurred.

@@ -1,0 +1,121 @@
+<html>
+    <head>
+
+        <style>
+            span
+            {
+                font-size: 16px;
+                color: coral;
+            }
+        </style>
+
+    </head>
+    <body>
+        <mark style="display: block; font-size: 40px; color: brown; text-align: center;">
+            Use of functions
+        </mark>
+        <hr/>
+
+        <br/><br/>
+
+        <div style="font-size: 20px; color: blue;">
+            Enter the array separated by space : 
+
+            <input type="text" id="array" name="array"></input>
+            <input type="button" onclick="fn_evennos()" value="Count of even nos"/> 
+
+            &nbsp;&nbsp;
+            <span id="s1"></span>
+
+            <br/>
+            <br/>
+
+            Enter the base value(i.e. x for x<sup>y</sup>) : 
+
+            <input type="text" id="base" name="base"></input>
+            <br/>
+
+            Enter the exponent value(i.e. y for x<sup>y</sup>) : 
+
+            <input type="text" id="exp" name="exp"></input>
+            <input type="button" onclick="fn_power()" value="Get x^y"/> 
+
+            &nbsp;&nbsp;
+
+            <span id="s2"></span>
+
+            <br/>
+            <br/>
+
+            Enter the sentence : 
+            <br/>
+
+            <textarea id="words" name="words" cols="55" rows="3" style="margin: 13px;"></textarea>
+            <input type="button" onclick="fn_countofwords()" value="Count words"/> 
+            
+
+            &nbsp;&nbsp;
+            <span id="s3"></span>
+
+        </div>
+
+        <script>
+            function fn_evennos()
+            {
+                var arrObj=document.getElementById("array");
+
+                var arr=arrObj.value.split(" ");
+
+                var str="";
+                var count=0
+
+                for(var i=0;i<arr.length;i++)
+                {
+                    var no=parseInt(arr[i]);
+
+                    if(no%2==0)
+                    {
+                        if(count==0)
+                            str+='('+no;
+                        else
+                            str+=", "+no;
+                        count++;
+                    }
+                }
+
+                if(count==0)
+                    str="There is no even no in the array.";
+                else    
+                    str="There are "+count+" even nos in the array."+str+')';
+
+
+                var spanObj=document.getElementById("s1");
+                spanObj.innerHTML=str;
+                
+            }
+
+            function fn_power()
+            {
+                var base=parseInt(document.getElementById("base").value);
+                var exp=parseInt(document.getElementById("exp").value);
+
+                var spanObj=document.getElementById("s2");
+                spanObj.innerHTML="Result of "+base+"<sup>"+exp+"</sup> is "+Math.pow(base,exp);
+                
+            }
+
+            function fn_countofwords()
+            {
+                var sent=document.getElementById("words").value;
+
+                var count=sent.split(" ").length;
+
+                var spanObj=document.getElementById("s3");
+                spanObj.innerHTML="There are "+count+" words in the sentence.";
+
+            }
+
+        </script>
+
+    </body>
+</html>
