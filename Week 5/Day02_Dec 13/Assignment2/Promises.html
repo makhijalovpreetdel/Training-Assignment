@@ -1,0 +1,65 @@
+<html>
+    <head></head>
+    <body>
+        <h1 style="color: maroon; background-color: yellow;">Promise Demo</h1>
+
+        <hr/> 
+	 
+        <button  onclick="fn_getData()">Get Data </button>
+	<br/><br/>
+	
+	 
+	 
+	<script>	 
+    
+        function fn_getData()
+        {
+            var headingRowAdded=false;
+            var tableObj = document.createElement("table");
+            tableObj.setAttribute("id","tbl");
+            tableObj.setAttribute("border","1");
+            
+            let url = "https://www.w3schools.com/angular/customers.php";
+            
+            fetch(url).then(  (response)  => 
+            {
+                response.json().then(  (resData)  =>  
+                    {
+                        
+                        for(let item of   resData.records)
+                        {
+                            const all_keys = Object.keys(item);
+
+                            if(!headingRowAdded)
+                            {
+                                headingRowAdded=true;
+                                var str="<tr>";
+                                for (let hd of all_keys) {
+                                    str+="<th>"+hd+"</th>"
+                                }
+                                str+="</tr>";
+                                tableObj.innerHTML=str;
+                            }
+
+                            var row=tableObj.insertRow(-1);
+
+                            for (let j=0; j < all_keys.length; j++) {
+                                var cell=row.insertCell(-1);
+                                cell.innerHTML=item[all_keys[j]];
+                            }
+                        }
+                        
+                            
+                    });
+            })
+            .catch((error) => 
+            {
+                tableObj.innerHTML  =  "<tr><td style='color:red;'>Please Check your code once again.</td></tr>";
+            });
+            document.body.appendChild(tableObj);
+        }  
+
+	</script>	  
+
+    </body>
+</html>
