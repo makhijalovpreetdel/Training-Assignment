@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script  src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    </head>
+    <body>
+        <p>knfknkfenfk</p>
+        <p>cbjjsbjcbjdbjwbj</p>
+        <p>jedbjedbjdbejbjbedjedbjbde</p>
+        <p>jhbxjsbjxbjbsjbjsbwysqidgwigsiwqgsi</p>
+        <input type="button" value="usingTag" onclick="fn_ChangeUsingTag()"/>
+        <input type="button" value="usingQuerySelAll" onclick="fn_ChangeUsingquerySelAll()"/>
+        <input type="button" value="usingjQuery" onclick="fn_jQuery()"/>
+
+        <script>
+            function fn_ChangeUsingTag()
+            {
+                var arrObj=document.getElementsByTagName("p");
+                for(var item of arrObj)
+                    item.style.color="blue";
+            }
+            function fn_ChangeUsingquerySelAll()
+            {
+                var arrObj=document.querySelectorAll("p");
+                for(var item of arrObj)
+                    item.style.color="red";
+            }
+            function fn_jQuery()
+            {
+                $("p").css("color","pink");
+            }
+        </script>
+    </body>
+</html>

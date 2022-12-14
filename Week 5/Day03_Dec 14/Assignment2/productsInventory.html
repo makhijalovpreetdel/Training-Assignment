@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script  src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+        <style>
+            input
+            {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="text-align: center;">Operaions using jQuery</h2>
+        <hr/>
+
+        Product Name: <input type="text" id="pname"/><br/>
+        Unit Price: <input type="text" id="uprice"/><br/>
+        Quantity: <input type="text" id="qty"/><br/>
+
+        Total Amount: <input type="text" disabled id="tamt"/><br/>
+
+        Discount : <input type="text" disabled id="disc"/><br/>
+
+        Final Amount : <input type="text" disabled id="finamt"/><br/>
+
+        <input type="button" value="Get Final Value" id="btn"/>
+
+        <script>
+            
+            $("#btn").click(function()
+            
+            {
+                var unitpr=parseInt($("#uprice").val());
+                var qnty=parseInt($("#qty").val());
+
+                var total=unitpr*qnty;
+
+                $("#tamt").val(total);
+
+                var disc=0;
+
+                if(qnty>10)
+                    disc=0.1*total;
+
+                $("#disc").val(disc);
+
+                $("#finamt").val(total-disc);
+                
+            })
+
+        </script>
+    </body>
+</html>

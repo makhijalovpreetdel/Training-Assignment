@@ -1,0 +1,64 @@
+1.   How to hide html element using JavaScript?
+
+
+     There are three ways of hiding an element using javascript. They are: 
+
+     > Using the hidden property
+          In JavaScript, the hidden property of an element is used to hide an element.
+          We set the hidden properties value to true to hide the element.
+
+	      Syntax
+	          Following is the syntax to use hidden property −
+
+                  document.getElementById('element').hidden = true
+ 
+     > Using the style.display property
+	  In JavaScript, style.display property is also used to hide the HTML element.
+          It can have values like ‘block,’ ‘inline,’ ‘inline-block,’ etc., but the value used to hide an element is ‘none.’
+          Using JavaScript, we set the style.display property value to ‘none’ to hide html element.
+
+             Syntax
+	         Following is the syntax to hide HTML elements using style.display property in JavaScript.
+
+	         document.getElementById('element').style.display = 'none'
+
+     > Using the style.visibility property
+          In JavaScript, style.visibility property is also used to hide the HTML element.
+          It can have values like ‘visible,’ ‘collapse,’ ‘hidden’, ‘initial’ etc., but the value used to hide an element is ‘hidden’.
+          Using JavaScript, we set the style.visibility property value to ‘hidden’ to hide html element.
+
+            Syntax
+                Following is the syntax to hide HTML elements using style.visibility property in JavaScript −
+
+		document.getElementById('element').style.visibility = 'hidden'
+
+
+2.   How to change text color of all paragraphs in the document using JavaScript?
+
+
+     We can change the color of all the paragraphs using javascript in the following ways: 
+ 
+     > document.getElementsByTagName("tagname");
+     > document.querySelectorAll("p");
+
+     Now, as both the fns return array of objects, so iterate through the array and change the color for each object.
+
+
+3.   How to select all textboxes using jQuery selector?
+
+
+     We can select all the textboxes in the following ways:
+    
+     > We can add a class to all the input textbox tags that we want to access, then use .class selector.
+     > And, the other method is using this syntax $('input[type=text]').
+
+
+4.   What is the difference between   "this" and  $(this) in jquery programming?
+
+	       this                                                                $(this)
+
+     > It refers to DOM elements	                              It also refers to DOM elements.
+     > this is used in a native way.	                              this is put in $(), it becomes a jQuery object.
+     > We can call all DOM methods on it but not jQuery methods.      We can call all jQuery methods and functions on it but not DOM methods.
+     > this has only generic JavaScript functionality.	              By using $(this), you enabled jQuery functionality for the object.
+
