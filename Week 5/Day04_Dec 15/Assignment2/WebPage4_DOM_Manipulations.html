@@ -1,0 +1,90 @@
+<!-- Create HTML Page to display Hello World message by using jQuery -->
+<html>
+ <head> 
+
+	<style>
+		.inputuser
+		{
+			margin: 5px;
+		}
+	</style>
+
+ </head>
+ <body>
+	 <h2> DOM Manipulations in jQuery</h2>
+<hr> 
+
+Product Name : <input type="text" class="inputuser" id="prodname"/><br/>
+Unit Price : <input type="text" class="inputuser" id="unipr"/><br/>
+Units In Stock : <input type="text" class="inputuser" id="uniinst"/><br/><br/>
+
+<input type="button"  id="b1" value="Clear Input" />
+
+&nbsp;
+&nbsp;
+
+<input type="button"  id="b2" value="Add Row" />
+
+<br></br>
+
+ <table  id="table1" border="2" width="400px">
+ 
+	<tr>
+		<th>Product Name</th>
+		<th>Unit Price</th>
+		<th>Units In Stock</th>
+	</tr>
+	<tr>
+		<td>Printer</td>
+		<td>2500.00</td>
+		<td>20</td>
+	</tr>
+	<tr>
+		<td>4GB-RAM</td>
+		<td>1200.00</td>
+		<td>23</td>
+	</tr> 
+	<tr>
+		<td>1TB Samsung HDD</td>
+		<td>4500.00</td>
+		<td>20</td>
+	</tr>
+	<tr>
+		<td>32-GB Kingston USB</td>
+		<td>800.00</td>
+		<td>35</td>
+	</tr>  
+	</table>  
+		 
+ 
+	
+	<script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	
+	<script>	
+	
+		$(document).ready(function()
+		{
+
+
+				$("#b1").click(function()  
+				{ 
+			 		$(".inputuser").val("");	
+				});	
+
+				$("#b2").click(function()  
+				{ 
+					let pname=$("#prodname").val();
+					let unitPrice=$("#unipr").val();
+					let unitsInStock=$("#uniinst").val();
+
+
+			 		$("#table1").append(`<tr><td>${pname}</td><td>${unitPrice}</td><td>${unitsInStock}</td></tr>`);	
+				});	
+		 
+		});
+				
+	</script>
+	
+ </body>
+</html>
+

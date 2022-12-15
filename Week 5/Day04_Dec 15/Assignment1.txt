@@ -1,0 +1,30 @@
+1.   What is the eval() method?
+
+
+     > The eval() method evaluates or executes an argument.
+     > If the argument is an expression, eval() evaluates the expression.
+     > If the argument is one or more JavaScript statements, eval() executes the statements.
+
+
+2.   What is the purpose of  prev() and next()  methods in jQuery?
+
+
+     prev() 
+
+     > Get the immediately preceding sibling of each element in the set of matched elements.
+     > If a selector is provided, it retrieves the previous sibling only if it matches that selector.
+
+     next()
+
+     > Get the immediately following sibling of each element in the set of matched elements.
+     > If a selector is provided, it retrieves the next sibling only if it matches that selector.
+
+
+3.   How to delete all rows in a table except first row?   
+
+
+     > The short answer is to use the slice() function to set the excepted rows and remove() to delete others.
+
+     $("table tr").slice(1).remove();
+
+     The slice() requires one argument as the numeric value to remove rows. If the value is 1, it removes all rows except first or header. 
